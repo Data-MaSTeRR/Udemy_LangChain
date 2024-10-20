@@ -12,13 +12,13 @@ from langchain.agents import (
 )
 from langchain import hub # langchain에서 미리 만든 프롬포트 사용가능
 
-from tools.findLinkInURL import get_profile_url_tavily
+from tools.findURLTavily import get_profile_url_tavily
 
 def lookup(name: str) -> str:
 
     llm = ChatOpenAI(
         temperature=0,
-        model_name="gpt-3.5-turbo",
+        model_name="gpt-4o-mini",
         openai_api_key=os.environ["OPENAI_API_KEY"]
     )
 
