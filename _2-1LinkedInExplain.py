@@ -5,7 +5,7 @@ from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
 
 # 링크드인에서 사람정보 불러오는 API
-from third_parties.LinkedIn import scrape_linkedin_profile
+from third_parties.LinkedInJson import scrape_linkedin_profile
 
 if __name__ == "__main__":
 
