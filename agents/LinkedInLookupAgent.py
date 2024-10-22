@@ -23,7 +23,7 @@ def lookup(name: str) -> str:
     )
 
 
-    template = """given the full name {name_of_person} I want you to get it me a link to their Linkedin profile page.
+    template = """given the full name {name_of_person} I want you to get it me a link to their **LinkedIn** profile page.
                           Your answer should contain only a URL"""
     prompt_template =  PromptTemplate(
         template=template, input_variable=["name_of_person"]
@@ -32,7 +32,7 @@ def lookup(name: str) -> str:
 
     tool_for_agent = [
         Tool(
-            name = "Tavily 4 linkedin profile page",
+            name = "Crawl Google 4 linkedin profile page",
             func = get_profile_url_tavily, # tools에 name -> linkedin url 가져오는 함수 만듦
             description = "useful for when you need get the LinkedIn profile page URL", # 많은 도구들 중 선택하는 기준
         )

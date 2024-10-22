@@ -21,7 +21,7 @@ def lookup(name: str) -> str:
         openai_api_key=os.environ["OPENAI_API_KEY"]
     )
     template = """
-       given the name {name_of_person} I want you to find a link to their Twitter profile page, and extract from it their username
+       given the name {name_of_person} I want you to find a link to their **Twitter** profile page, and extract from it their username
        In Your Final answer only the person's username"""
     prompt_template = PromptTemplate(
         template=template, input_variables=["name_of_person"]
