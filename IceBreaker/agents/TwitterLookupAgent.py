@@ -11,7 +11,7 @@ from langchain.agents import (
     AgentExecutor,
 )
 from langchain import hub
-from tools.findURLTavily import get_profile_url_tavily
+from IceBreaker.tools.findURLTavily import get_profile_url_tavily
 
 
 def lookup(name: str) -> str:

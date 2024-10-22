@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from langchain_openai import OpenAI, ChatOpenAI  # openai 관련 모듈
+from langchain_openai import ChatOpenAI  # openai 관련 모듈
 from langchain.prompts.prompt import PromptTemplate # 프롬포트 구성하는 모듈
 from langchain_core.tools import Tool # langchain이 외부환경과 연동되는 각종 도구 ex. 온라인 검색
 from langchain.agents import (
@@ -12,7 +12,7 @@ from langchain.agents import (
 )
 from langchain import hub # langchain에서 미리 만든 프롬포트 사용가능
 
-from tools.findURLTavily import get_profile_url_tavily
+from IceBreaker.tools.findURLTavily import get_profile_url_tavily
 
 def lookup(name: str) -> str:
 
